@@ -26,6 +26,54 @@ To make the solution practical for deployment, the trained model is also convert
 
 # Results
 
+<h3>Amaravati Dataset Results</h3>
+
+<table>
+<tr>
+<th>Category</th>
+<th>Precision</th>
+<th>Model</th>
+<th>MAE</th>
+<th>RMSE</th>
+<th>R²</th>
+<th>sMAPE</th>
+</tr>
+
+<tr>
+<td rowspan="8">Baseline Models</td>
+<td rowspan="4">FP32</td>
+<td>CATT-Net</td><td>4.30</td><td>6.04</td><td>0.72</td><td>16.31</td>
+</tr>
+<tr><td>GRU</td><td>4.23</td><td>6.08</td><td>0.73</td><td>15.45</td></tr>
+<tr><td>LSTM</td><td>4.76</td><td>6.62</td><td>0.69</td><td>17.18</td></tr>
+<tr><td>1D CNN</td><td>5.18</td><td>7.12</td><td>0.63</td><td>18.31</td></tr>
+
+<tr>
+<td rowspan="4">INT8</td>
+<td>CATT-Net</td><td>4.32</td><td>6.08</td><td>0.71</td><td>16.40</td>
+</tr>
+<tr><td>GRU</td><td>4.24</td><td>6.09</td><td>0.73</td><td>15.49</td></tr>
+<tr><td>LSTM</td><td>4.73</td><td>6.50</td><td>0.70</td><td>17.37</td></tr>
+<tr><td>1D CNN</td><td>5.13</td><td>6.99</td><td>0.64</td><td>18.34</td></tr>
+
+<tr>
+<td rowspan="8">Ablation Variants</td>
+<td rowspan="4">FP32</td>
+<td>CATT-Net (Full)</td><td>4.08</td><td>5.65</td><td>0.72</td><td>16.08</td>
+</tr>
+<tr><td>w/o Attention Pooling</td><td>4.15</td><td>5.78</td><td>0.72</td><td>15.71</td></tr>
+<tr><td>Single Transformer Block</td><td>4.51</td><td>6.29</td><td>0.70</td><td>16.78</td></tr>
+<tr><td>w/o Conv Frontend</td><td>4.71</td><td>6.50</td><td>0.67</td><td>17.88</td></tr>
+
+<tr>
+<td rowspan="4">INT8</td>
+<td>CATT-Net (Full)</td><td>4.09</td><td>5.68</td><td>0.72</td><td>16.08</td>
+</tr>
+<tr><td>w/o Attention Pooling</td><td>4.09</td><td>5.72</td><td>0.73</td><td>15.63</td></tr>
+<tr><td>Single Transformer Block</td><td>4.54</td><td>6.31</td><td>0.70</td><td>16.98</td></tr>
+<tr><td>w/o Conv Frontend</td><td>4.76</td><td>6.53</td><td>0.67</td><td>18.09</td></tr>
+
+</table>
 <img width="633" height="384" alt="image" src="https://github.com/user-attachments/assets/577b4834-9f61-4276-a8c3-3828d300a992" />
 <img width="626" height="386" alt="image" src="https://github.com/user-attachments/assets/3f250c18-f3c1-465b-b505-cedc4071714d" />
 <img width="634" height="397" alt="image" src="https://github.com/user-attachments/assets/246a1013-197e-4eda-a935-90c6e3255546" />
