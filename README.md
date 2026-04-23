@@ -23,3 +23,7 @@ The system is trained to predict multiple pollutants simultaneously (PM2.5, NO2,
 
 To make the solution practical for deployment, the trained model is also converted into an INT8 TensorFlow Lite format, making it suitable for edge devices with limited computational resources.
 <img width="1633" height="1122" alt="Model Architecture" src="https://github.com/user-attachments/assets/e505273f-bf8e-4c8c-a6f0-5c17ba052be6" />
+<img width="502" height="529" alt="image" src="https://github.com/user-attachments/assets/7e9c7d03-e760-47b7-bf82-6af853a6e59b" />
+<img width="633" height="384" alt="image" src="https://github.com/user-attachments/assets/577b4834-9f61-4276-a8c3-3828d300a992" />
+<img width="626" height="386" alt="image" src="https://github.com/user-attachments/assets/3f250c18-f3c1-465b-b505-cedc4071714d" />
+<img width="634" height="397" alt="image" src="https://github.com/user-attachments/assets/246a1013-197e-4eda-a935-90c6e3255546" />
