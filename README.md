@@ -22,3 +22,4 @@ This design keeps the model compact while still delivering strong performance.
 The system is trained to predict multiple pollutants simultaneously (PM2.5, NO2, O₃, SO₂) using hourly air quality data. It is evaluated across multiple datasets and compared with baseline models such as CNN, LSTM, and GRU.
 
 To make the solution practical for deployment, the trained model is also converted into an INT8 TensorFlow Lite format, making it suitable for edge devices with limited computational resources.
+<img width="1633" height="1122" alt="Model Architecture" src="https://github.com/user-attachments/assets/e505273f-bf8e-4c8c-a6f0-5c17ba052be6" />
