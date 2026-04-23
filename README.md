@@ -1,13 +1,15 @@
 # CATT-Net-Correlation-Aware-Tiny-Transformer-Network
-# ABSTRACT
+## ABSTRACT
 Predicting air quality precisely is a difficult task in a realistic air-quality monitoring environment due to incomplete, noisy, and sophisticated data about pollutants with time evolution. Missing data caused by malfunctions of sensors and problems related to data transfer and device maintenance negatively affect prediction results. At the same time, a great number of successful neural network architectures for air-quality predictions require high amounts of computational resources for their functioning. In order to address both issues in one approach, the paper presents an end-to-end multivariate forecasting framework. Initially, it uses CorrGAN– a data reconstruction algorithm based on generative adversarial networks that learns data correlations between air-quality indicators. Then, CATT-Net– correlation-aware tiny transformer– processes these data and predicts pollutant concentrations. Reconstructed by CorrGAN, data are filled-in and retain their natural correlations making complete and coherent multivariate sequences for training. The CATT-Net architecture includes convolutional features extraction, positional encoding, and self attention mechanism. Proposed approach makes it possible to forecast PM2.5, NO2,O3, and SO2 concentrations in parallel relying on hourly data of urban air quality. Efficacy of the approach was compared with the state-of-the-art techniques for deep learning and confirmed in several ablation studies analyzing the role of the architectural blocks. Furthermore, for the sake of practicality, resulting model was exported to TensorFlow Lite INT8 version.
 
-# Introduction
+## Introduction
 Air Quality Index (AQI) is a commonly used indicator that provides insight into the current air quality level by representing pollutant concentrations as an in
 dex,reflecting their possible impact on human health and nature. Particulate matter (PM2.5), nitrogen dioxide (NO2), ozone (O3), sulfur dioxide (SO2) are among the most important pollutants that lead to air quality problems in urban areas. By means of transforming the values of multiple pollutant concentrations into a single value, the AQI index serves as a useful tool for governmental agencies, environmental organizations, and ordinary citizens to understand the severity of the air pollution situation. It facilitates issuing health advisories and informing people about air pollution hazards. Moreover, knowing the AQI index allows decision-makers to formulate policies regarding urban planning, in dustrial production regulations, and traffic organization. Nonetheless, despite the apparent importance of AQI, forecasting its values in practice remains a difficult task. First of all, air-quality datasets frequently have missing values due to problems with sensors’ operation, maintenance, and communication. Secondly,pollutant concentration dynamics tend to be stochastic and highly dependent on various factors such as industrial production, vehicle emissions, weather, and human activity. This poses challenges for accurate prediction for traditional statistical methods and some deep learning models as well. Moreover, many precise forecasters require high computational capacities, rendering them inefficient on resource constrained devices. The goal of this project is to build an AQI prediction system that would be both accurate and suitable for practical implementation. In particular, in real environmental monitoring applications, neglecting missing values or applying trivial imputation techniques results in distortion of inter-correlations between pollutants and reduces the forecast accuracy. Similarly, employing sophisticated forecasting mechanisms raises accuracy but makes the models less appropriate for low-capacity devices. Hence, two complementary objectives motivate this work: first, recovering missing values from an air-quality dataset while ensuring their consistency; second, developing a lightweight forecast mechanism capable of learning long-range relationships and suitable for deployment on low-resources devices.The proposed solution combines CorrGAN-based missing value imputation with an efficient light multivariate transformer architecture called CATT-Net (Correlationaware Tiny Transformer Network).
+
+## Model Architecture
 <img width="1633" height="1122" alt="Model Architecture" src="https://github.com/user-attachments/assets/e505273f-bf8e-4c8c-a6f0-5c17ba052be6" />
 
-# Results
+## Results
 
 <h3>Amaravati Dataset Results</h3>
 
@@ -156,7 +158,7 @@ dex,reflecting their possible impact on human health and nature. Particulate mat
 
 </table>
 
-## Abservations on Results
+## Observations on Results
 From the results across Amaravati, Delhi, and Kolkata, it can be seen that CATT-Net generally performs better than the baseline models. In most cases, it gives lower error values, especially for MAE and RMSE, which shows that the predictions are more accurate.
 
 The Delhi dataset is more challenging due to higher variation, but even there, the model manages to maintain stable performance compared to others. For Amaravati, the errors are relatively lower, indicating smoother data patterns, while Kolkata falls somewhere in between.
