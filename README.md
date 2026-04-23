@@ -74,6 +74,3 @@ To make the solution practical for deployment, the trained model is also convert
 <tr><td>w/o Conv Frontend</td><td>4.76</td><td>6.53</td><td>0.67</td><td>18.09</td></tr>
 
 </table>
-<img width="633" height="384" alt="image" src="https://github.com/user-attachments/assets/577b4834-9f61-4276-a8c3-3828d300a992" />
-<img width="626" height="386" alt="image" src="https://github.com/user-attachments/assets/3f250c18-f3c1-465b-b505-cedc4071714d" />
-<img width="634" height="397" alt="image" src="https://github.com/user-attachments/assets/246a1013-197e-4eda-a935-90c6e3255546" />
